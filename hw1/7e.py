@@ -15,7 +15,7 @@ for n in ns:
     y_mean = np.mean(Y)
     y_std = np.std(Y)
 
-    skew_est = np.mean((Y - y_mean**3)) / y_std**3
+    skew_est = np.mean((Y - y_mean)**3) / y_std**3
     estim.append(skew_est)
 
 fig, ax = plt.subplots()
