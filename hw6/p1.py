@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+p=np.array([[0,1,0,0,0],[1/3,0,2/3,0,0],[0,.5,0,.5,0],[0,0,2/3,0,1/3],[0,0,0,1,0]])
+pi=np.array([1/12,1/4,1/3,1/4,1/12])
+mu=np.array([0.,0,1,0,0])
+q50=mu@np.linalg.matrix_power(p,50)
+i=np.arange(5)
+plt.bar(i-.2,q50,width=.4,label='q50(i)')
+plt.bar(i+.2,pi,width=.4,label='pi(i)')
+plt.xticks(i)
+plt.legend()
+plt.xlabel('i')
+plt.ylabel('Probability')
+plt.title('q50(i) and pi(i)')
+plt.show()
